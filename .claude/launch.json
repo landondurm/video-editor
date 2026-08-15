@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "clip-preview",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [".claude/preview-server.py"],
+      "port": 7842
+    },
+    {
+      "name": "docs",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "7843"],
+      "port": 7843
+    }
+  ]
+}

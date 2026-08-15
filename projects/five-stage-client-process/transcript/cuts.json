@@ -1,0 +1,70 @@
+{
+ "segments": [
+  {
+   "clip": "C0111.MP4",
+   "start": 294.94465,
+   "end": 304.45415,
+   "no_refine": true,
+   "transcript": "So I've broken my process down into about five different stages, each one having its own separate job, leading back to an overarching goal, which is to get you more clients."
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 384.4841,
+   "end": 401.5011,
+   "transcript": "Stage one is decipher. The whole job of deciphering is to make them say the problem out loud. This is going to be on a call. So you want to talk maybe 20% of the time, have them talk the other 80% and just figure out what exactly are they struggling with? Where are their issues? How can you help them?"
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 404.37063333333333,
+   "end": 407.65725,
+   "transcript": "That'll lead us into stage two, which is the offer."
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 408.42468333333335,
+   "end": 413.7133,
+   "transcript": "This is you by yourself writing this down, talking to Claude, talking to an LLM, trying to figure out"
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 425.95886666666667,
+   "end": 427.59383333333335,
+   "transcript": "how to arrange what they told you"
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 428.428,
+   "end": 430.59683333333334,
+   "transcript": "into what somebody would actually buy."
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 433.06596666666667,
+   "end": 435.0179166666667,
+   "transcript": "So whether that's a system or a software,"
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 435.70193333333333,
+   "end": 438.0376,
+   "transcript": "the whole point is to figure out, okay, well,"
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 438.6548833333333,
+   "end": 443.59315,
+   "transcript": "if they have this problem and I can build this solution, how do I best present them to that"
+  },
+  {
+   "clip": "C0111.MP4",
+   "start": 444.46068333333335,
+   "end": 445.79535,
+   "air": 0.4,
+   "transcript": "in order to close them?",
+   "_refine": {
+    "orig_start": 444.46,
+    "orig_end": 445.4
+   }
+  }
+ ]
+}

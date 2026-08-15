@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/>
+<meta name="viewport" content="width=3840, height=2160"/>
+<title>g4</title>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<style>
+  body{margin:0;background:transparent;font-family:'Inter',sans-serif;}
+  @font-face{font-family:'Inter';src:url('assets/fonts/Inter-Black.otf');font-weight:900;}
+  @font-face{font-family:'Inter';src:url('assets/fonts/Inter-Bold.otf');font-weight:700;}
+  @font-face{font-family:'Inter';src:url('assets/fonts/Inter-Regular.otf');font-weight:400;}
+  #root{position:relative;width:3840px;height:2160px;overflow:hidden;}
+  .clip{position:absolute;inset:0;}
+  /* static 2x stage: card coordinates stay 1920x1080, output is native 4K.
+     Never GSAP-tween this element (CSS transform is its own). */
+  .stage{position:absolute;left:0;top:0;width:1920px;height:1080px;
+    transform:scale(2);transform-origin:0 0;}
+  :root{--royal:#1e48ff;--sky:#57c9f0;--txt:#e8f0ff;--muted:#8fa6d4;}
+  .panel{position:absolute;left:1180px;width:620px;box-sizing:border-box;
+    background:linear-gradient(160deg,#12224e 0%,#0a1435 100%);
+    border:2px solid rgba(96,146,255,0.42);border-radius:22px;
+    box-shadow:0 26px 60px rgba(2,7,24,0.72), 0 0 0 1px rgba(6,13,36,0.85),
+               inset 0 2px 0 rgba(140,180,255,0.22);
+    padding:34px 40px 38px;}
+  .topline{display:flex;align-items:center;gap:14px;}
+  .dot{width:12px;height:12px;border-radius:50%;background:var(--sky);
+    box-shadow:0 0 12px rgba(87,201,240,0.85);}
+  .eyebrow{font-weight:700;font-size:23px;letter-spacing:3.4px;text-transform:uppercase;color:var(--muted);}
+  .rule{height:1px;background:rgba(96,146,255,0.30);margin:20px 0 22px;}
+  .head{font-weight:900;color:var(--txt);line-height:1.04;letter-spacing:-1.6px;}
+  .royal{color:var(--royal);}
+  .body{font-weight:400;font-size:26px;color:var(--muted);line-height:1.35;margin-top:18px;}
+  .mrow{display:flex;align-items:center;gap:16px;margin-top:26px;}
+  .mlabel{font-weight:700;font-size:24px;letter-spacing:1.5px;color:var(--txt);width:96px;}
+  .mpct{font-weight:900;font-size:44px;letter-spacing:-1px;color:var(--txt);width:110px;text-align:right;}
+  .meter{display:flex;gap:6px;flex:1;}
+  .cell{height:16px;flex:1;border-radius:4px;background:rgba(96,146,255,0.16);}
+  .cell.on{background:var(--royal);box-shadow:0 0 10px rgba(30,72,255,0.5);}
+</style></head>
+<body>
+<div id="root" data-composition-id="main" data-start="0" data-width="3840" data-height="2160" data-duration="6.6000">
+  <section id="g4-clip" class="clip" data-start="0" data-duration="6.6000" data-track-index="1">
+    <div class="stage">
+      <div class="panel" id="g4p" style="top:150px;">
+      <div class="topline" id="g4a"><span class="dot"></span><span class="eyebrow">Stage 02</span></div>
+      <div class="rule" id="g4r"></div>
+      <div class="head royal" id="g4h" style="font-size:76px;">The Offer</div>
+      <div class="body" id="g4b">their words &rarr; something they&rsquo;d buy</div>
+      </div>
+    </div>
+  </section>
+</div>
+<script>
+window.__timelines = window.__timelines || {};
+const F = 0.0166833333, DUR = 6.6000;
+const tl = gsap.timeline({ paused: true });
+tl.fromTo("#g4p", {opacity:0, y:26}, {opacity:1, y:0, duration:12*F, ease:"steps(2)"}, 0);
+tl.fromTo("#g4a", {opacity:0, y:10}, {...{opacity:1, y:0}, duration:8*F, ease:"steps(2)"}, 10*F);
+tl.fromTo("#g4r", {opacity:0}, {...{opacity:1}, duration:8*F, ease:"steps(2)"}, 14*F);
+tl.fromTo("#g4h", {opacity:0, y:10}, {...{opacity:1, y:0}, duration:8*F, ease:"steps(2)"}, 18*F);
+tl.fromTo("#g4b", {opacity:0, y:10}, {...{opacity:1, y:0}, duration:8*F, ease:"steps(2)"}, 26*F);
+
+tl.to("#g4p", {opacity:0, y:-14, duration:14*F, ease:"steps(2)"}, DUR-16*F);
+tl.set("#g4p", {opacity:0}, DUR-0.0005);
+window.__timelines["main"] = tl;
+</script>
+</body></html>

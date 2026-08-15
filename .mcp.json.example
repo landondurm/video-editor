@@ -1,0 +1,13 @@
+{
+  "_comment": "OPTIONAL — only for the Premiere Pro finishing lane (the premiere-pro skill). EASY PATH: run ./setup-premiere.sh — it installs the pinned engine + the panel and writes .mcp.json for your OS automatically (macOS fully supported; Windows via WSL2 is BETA and uses a shared folder on C: instead of /tmp; plain Linux has no Premiere). This file is only the reference for what setup-premiere.sh writes, or for wiring by hand. Engine is a pinned local clone of github.com/hetpatel-11/Adobe_Premiere_Pro_MCP (do NOT use the premiere-pro-mcp npm package — it's an abandoned republish with a broken CEP bridge shim). Manual steps if you skip the script: 1) git clone https://github.com/hetpatel-11/Adobe_Premiere_Pro_MCP.git vendor/premiere-mcp && cd vendor/premiere-mcp && npm install && npm run build  2) install the panel: rm -rf \"$HOME/Library/Application Support/Adobe/CEP/extensions/MCPBridgeCEP\" && cp -R cep-plugin \"$HOME/Library/Application Support/Adobe/CEP/extensions/MCPBridgeCEP\" (enable CEP debug mode once if the panel doesn't appear: defaults write com.adobe.CSXS.12 PlayerDebugMode 1)  3) copy this file to .mcp.json (the args path resolves relative to the project root)  4) restart Claude Code  5) restart Premiere and open Window > Extensions > MCP Bridge (CEP) > Start Bridge. If you don't use Premiere, do nothing — leave this as .example.",
+  "mcpServers": {
+    "premiere-pro": {
+      "command": "node",
+      "args": ["vendor/premiere-mcp/dist/index.js"],
+      "env": {
+        "PREMIERE_TEMP_DIR": "/tmp/premiere-mcp-bridge",
+        "PREMIERE_TIMEOUT_MS": "60000"
+      }
+    }
+  }
+}

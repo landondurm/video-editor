@@ -1,0 +1,80 @@
+{
+  "job": "five-stage-client-process",
+  "format": "long-form",
+  "tier": "basic",
+  "duration": 49.47,
+  "preset": "presets/default-overlay-style.md",
+  "face_covered_seconds": 0,
+  "beats": [
+    {
+      "id": 1, "start": 0.10, "end": 9.51,
+      "line": "So I've broken my process down into about five different stages, each one having its own separate job, leading back to an overarching goal, which is to get you more clients.",
+      "graphic": true,
+      "kind": "label-card",
+      "region": "callout-R",
+      "window": [0.8, 9.0],
+      "content": "Label card, Callout R. Eyebrow 'MY SALES PROCESS' · headline '5 Stages → More Clients' with 'Clients' in royal. Status dot + hairline rule furniture. Stepped fade+slide in at 0.8s, out by 9.0s.",
+      "reason": "the hook — beat 1 always gets a graphic; names the structure of the whole video"
+    },
+    {
+      "id": 2, "start": 9.55, "end": 15.56,
+      "line": "Stage one is decipher. The whole job of deciphering is to make them say the problem out loud.",
+      "graphic": true,
+      "kind": "label-card",
+      "region": "callout-R",
+      "window": [9.8, 15.4],
+      "content": "Label card, Callout R. Eyebrow 'STAGE 01' · headline 'Decipher' in royal · body row (muted): 'make them say the problem out loud' stamping in 4 frames after the headline.",
+      "reason": "a named stage of the framework — the label anchors the structure"
+    },
+    {
+      "id": 3, "start": 15.76, "end": 16.88,
+      "line": "This is going to be on a call.",
+      "graphic": false,
+      "reason": "connective beat — one second, let the face carry it"
+    },
+    {
+      "id": 4, "start": 17.38, "end": 24.61,
+      "line": "So you want to talk maybe 20% of the time, have them talk the other 80% and just figure out what exactly are they struggling with?",
+      "graphic": true,
+      "kind": "data-viz",
+      "region": "callout-R",
+      "window": [17.6, 24.4],
+      "content": "Meter card, Callout R. Eyebrow 'ON THE CALL' · two rows: 'YOU — 20%' with a segmented meter filling 2/10 cells in royal, then 'THEM — 80%' filling 8/10 cells; rows stamp in sequence, meter cells stamp on the 3-frame grid (discrete tl.set steps, never onUpdate).",
+      "reason": "the one hard number in the video — the 20/80 rule is the most showable claim"
+    },
+    {
+      "id": 5, "start": 24.79, "end": 26.47,
+      "line": "Where are their issues? How can you help them?",
+      "graphic": false,
+      "reason": "rhetorical questions — delivery beats, plain"
+    },
+    {
+      "id": 6, "start": 26.57, "end": 33.60,
+      "line": "That'll lead us into stage two, which is the offer. This is you by yourself writing this down, talking to Claude, talking to an LLM,",
+      "graphic": true,
+      "kind": "label-card",
+      "region": "callout-R",
+      "window": [26.8, 33.4],
+      "content": "Label card, Callout R. Eyebrow 'STAGE 02' · headline 'The Offer' in royal · body row (muted): 'their words → something they'd buy'.",
+      "reason": "second named stage — mirrors card 2 so the framework reads as a system"
+    },
+    {
+      "id": 7, "start": 33.80, "end": 38.85,
+      "line": "trying to figure out how to arrange what they told you into what somebody would actually buy.",
+      "graphic": false,
+      "reason": "explanation riding on card 6's context — keep the screen clear"
+    },
+    {
+      "id": 8, "start": 38.94, "end": 44.30,
+      "line": "So whether that's a system or a software, the whole point is to figure out, okay, well, if they have this problem",
+      "graphic": false,
+      "reason": "connective reasoning — plain"
+    },
+    {
+      "id": 9, "start": 44.64, "end": 49.01,
+      "line": "and I can build this solution, how do I best present them to that in order to close them?",
+      "graphic": false,
+      "reason": "closing thought of the section — face carries the landing; section ends mid-video anyway"
+    }
+  ]
+}

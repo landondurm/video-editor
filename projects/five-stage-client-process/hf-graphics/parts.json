@@ -1,0 +1,51 @@
+{
+ "job": "five-stage-client-process",
+ "fps": "60000/1001",
+ "base": "../outputs/five-stage-client-process.mp4",
+ "parts": [
+  {
+   "id": "g1",
+   "window": [
+    0.8,
+    9.0
+   ],
+   "kind": "overlay",
+   "comp": "compositions/g1.html",
+   "clip": "renders/parts/g1.mov",
+   "sha": "cc1381995204"
+  },
+  {
+   "id": "g2",
+   "window": [
+    9.8,
+    15.4
+   ],
+   "kind": "overlay",
+   "comp": "compositions/g2.html",
+   "clip": "renders/parts/g2.mov",
+   "sha": "c7337b3679fe"
+  },
+  {
+   "id": "g3",
+   "window": [
+    17.6,
+    24.4
+   ],
+   "kind": "overlay",
+   "comp": "compositions/g3.html",
+   "clip": "renders/parts/g3.mov",
+   "sha": "2b5131f6d628"
+  },
+  {
+   "id": "g4",
+   "window": [
+    26.8,
+    33.4
+   ],
+   "kind": "overlay",
+   "comp": "compositions/g4.html",
+   "clip": "renders/parts/g4.mov",
+   "sha": "817e25deb81d"
+  }
+ ]
+}

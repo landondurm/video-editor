@@ -1,0 +1,88 @@
+# macOS
+.DS_Store
+
+# Secrets — never commit
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Render scratch / intermediates (regenerable — see prune.sh)
+work-*/
+/tmp/video-editor/
+
+# Heavy media a client shouldn't track. Source raw + final outputs are local-only;
+# the pipeline regenerates everything in between. Comment these out if you DO want
+# to version your footage.
+projects/*/raw/
+projects/*/outputs/
+projects/*/broll/*
+!projects/*/broll/*.json
+projects/*/captures/
+# section sub-jobs (projects/<job>/sections/<name>/) — same media rules
+projects/*/sections/*/raw/
+projects/*/sections/*/outputs/
+projects/*/sections/*/broll/*
+!projects/*/sections/*/broll/*.json
+projects/*/sections/*/captures/
+# clipper sub-jobs (projects/<parent>/clips/<name>/) — same media rules
+projects/*/clips/*/raw/
+projects/*/clips/*/outputs/
+projects/*/clips/*/broll/*
+!projects/*/clips/*/broll/*.json
+projects/*/clips/*/captures/
+
+# Loudness-normalized swap copies for an app-finish audio pass — regenerable from
+# raw/ via workflows/resolve-audio-polish/normalize-sections.sh (REVERT.json is the
+# only durable part, and it names paths, not media)
+projects/*/audio-normalized/
+projects/*/sections/*/audio-normalized/
+projects/*/clips/*/audio-normalized/
+
+# HyperFrames regenerable caches (rebuilt by setup-assets.sh / render-all.sh)
+projects/*/hf-*/renders/
+projects/*/hf-*/assets/
+# nested render/asset dirs + rendered clips deeper inside a graphics build (e.g. titles/)
+projects/*/hf-*/**/renders/
+projects/*/hf-*/**/assets/
+projects/*/hf-*/**/*.mp4
+projects/*/hf-*/**/*.mov
+projects/*/sections/*/hf-*/renders/
+projects/*/sections/*/hf-*/assets/
+projects/*/clips/*/hf-*/renders/
+projects/*/clips/*/hf-*/assets/
+
+# packaging build output
+packaging/dist/
+
+# setup markers (written by the overlay setup.sh when run from the source repo)
+/.setup-hyperframes-ok
+/.setup-complete
+projects/*/hf-*/.lint/
+# repo-root vendored engine clones only (anchored: skills ship their own vendor/ asset dirs)
+/vendor/
+# machine-local MCP wiring (absolute paths; clients get .mcp.json.example)
+/.mcp.json
+
+# Rendered overlay movs copied into job assets/ for Premiere import — regenerable
+# via hf-graphics/render.sh (and >100MB ones would be rejected by GitHub anyway)
+projects/*/assets/*.mov
+projects/*/assets/**/*.mov
+
+# Premiere's own rotating auto-saves (the .prproj in premiere/ is the real project)
+projects/*/premiere/Adobe Premiere Pro Auto-Save/
+
+# Premiere preview/conform caches — regenerable scratch (jobs with scratch disks
+# pointed at the job folder write these next to the .prproj)
+projects/*/premiere/Adobe Premiere Pro Video Previews/
+projects/*/premiere/Adobe Premiere Pro Audio Previews/
+projects/*/premiere/Media Cache/
+projects/*/premiere/Media Cache Files/
+
+# Premiere-generated sidecar caches next to the .prproj (mask tracking + .prin) — regenerable
+projects/*/premiere/* Masks/
+projects/*/premiere/*.prin
